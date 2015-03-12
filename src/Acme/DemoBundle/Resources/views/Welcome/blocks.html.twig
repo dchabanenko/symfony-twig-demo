@@ -1,5 +1,3 @@
-{% extends "AcmeDemoBundle::layout.html.twig" %}
-
 {% block dream %}
     afterDreamParent
 {% endblock dream %}
@@ -9,7 +7,7 @@
         <div class="wrapper">
             <ul class="properties_list">
                 {% for room in rooms %}
-                    {% include "AcmeDemoBundle:Welcome:room.html.twig" %}
+                    {% include "room.html.twig" %}
                 {% endfor %}
             </ul>
             <div class="more_listing">
@@ -19,4 +17,3 @@
     </section>	<!--  end listing section  -->
 
 {% endblock content %}
-
