@@ -18,6 +18,12 @@ class WelcomeController extends Controller
         return $this->render('AcmeDemoBundle:Welcome:index.html.twig', array('rooms' => $this->provide()));
     }
 
+    public function aboutAction()
+    {
+        return $this->render('AcmeDemoBundle:Welcome:about.html.twig', array());
+    }
+
+
     private function provide()
     {
         return [
