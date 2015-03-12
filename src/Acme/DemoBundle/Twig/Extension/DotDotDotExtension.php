@@ -11,6 +11,13 @@ class DotDotDotExtension extends \Twig_Extension
         );
     }
 
+    public function getFunctions()
+    {
+        return array(
+            new \Twig_SimpleFunction('dotdotdot', array($this, 'dotdotdotFilter')),
+        );
+    }
+
     public function dotdotdotFilter($text, $number = 20)
     {
         $decodedText = trim(strip_tags($text));
