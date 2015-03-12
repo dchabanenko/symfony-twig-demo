@@ -23,6 +23,13 @@ class WelcomeController extends Controller
         return $this->render('AcmeDemoBundle:Welcome:about.html.twig', array());
     }
 
+    public function viewAction($id)
+    {
+        $flats = $this->provide();
+        $flat = $flats[$id];
+        $loop = ['index' => $id];
+        return $this->render('AcmeDemoBundle:Welcome:room.html.twig', array('room' => $flat, 'loop' => $loop));
+    }
 
     private function provide()
     {

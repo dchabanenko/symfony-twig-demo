@@ -14,3 +14,7 @@ _demo:
 _about:
     path:     /about
     defaults: { _controller: AcmeDemoBundle:Welcome:about }
+
+_flat_view:
+    path:     /flat/{id}/view
+    defaults: { _controller: AcmeDemoBundle:Welcome:view }

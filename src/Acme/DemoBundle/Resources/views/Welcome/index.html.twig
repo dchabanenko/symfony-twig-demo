@@ -9,7 +9,11 @@
         <div class="wrapper">
             <ul class="properties_list">
                 {% for room in rooms %}
-                    {% include "AcmeDemoBundle:Welcome:room.html.twig" %}
+                    {#{% include "AcmeDemoBundle:Welcome:room.html.twig" %}#}
+                    {{ render(controller(
+                        'AcmeDemoBundle:Welcome:view',
+                        {'id': loop.index0 }
+                    ))  }}
                 {% endfor %}
             </ul>
             <div class="more_listing">
