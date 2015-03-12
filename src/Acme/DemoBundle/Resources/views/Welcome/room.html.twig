@@ -5,7 +5,7 @@
     <span class="price">${{ room.price }}</span>
     <div class="property_details">
         <h1>
-            <a href="{{ path('_flat_view', {'id': loop.index}) }}">Fuisque dictum tortor at purus libero</a>
+            <a href="{{ path('_flat_view', {'id': loop.index}) }}">{{ room.caption|dotdotdot(11) }}</a>
         </h1>
         <h2>{{ room.description }} <span class="property_size">({{ room.size }}ftsq)</span></h2>
     </div>

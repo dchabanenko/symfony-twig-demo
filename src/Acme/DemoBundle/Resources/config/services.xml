@@ -3,9 +3,16 @@
 <container xmlns="http://symfony.com/schema/dic/services"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="twig.extension.acme.dotdotdot.class" >Acme\DemoBundle\Twig\Extension\DotDotDotExtension</parameter>
+    </parameters>
 
     <services>
         <service id="twig.extension.acme.demo" class="Acme\DemoBundle\Twig\Extension\DemoExtension" public="false">
+            <tag name="twig.extension" />
+            <argument type="service" id="twig.loader" />
+        </service>
+        <service id="twig.extension.acme.dotdotdot" class="%twig.extension.acme.dotdotdot.class%" public="false">
             <tag name="twig.extension" />
             <argument type="service" id="twig.loader" />
         </service>

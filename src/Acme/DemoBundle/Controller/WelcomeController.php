@@ -46,7 +46,7 @@ class WelcomeController extends Controller
                 'img' => 'property_2.jpg',
                 'price' => 600,
                 'href' => 'bbbb.html',
-                'caption' => 'Fuisque dictum tortor at purus libero',
+                'caption' => 'Some Other caption with lots of letters, letters, letters, letters, letters, letters, letters...',
                 'description' => '3 kitchens, 6 bed, 8 bath...',
                 'size' => 666,
             ],
