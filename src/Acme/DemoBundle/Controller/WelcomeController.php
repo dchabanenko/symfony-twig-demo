@@ -31,6 +31,11 @@ class WelcomeController extends Controller
         return $this->render('AcmeDemoBundle:Welcome:room.html.twig', array('room' => $flat, 'loop' => $loop));
     }
 
+    public function listAction()
+    {
+        return $this->render('AcmeDemoBundle:Welcome:list.html.twig', array());
+    }
+
     private function provide()
     {
         return [

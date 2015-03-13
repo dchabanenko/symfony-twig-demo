@@ -35,6 +35,15 @@ $(document).ready(function(){
 
 	});
 
+	$('#load-flats').click(function (e) {
+		var roomobj = {'price': 111, 'caption': 'caption sfdlkjfslkfdjsldkf sldkfjs dlfk','description': 'sdlfkjsdlfk sdlfks dlfskd', 'size': 445, 'img': 'property_1.jpg'};
+
+		var content = Twig.render(roomjs.html, {room: roomobj})
+		$('.properties_list').html(content);
+
+
+	});
+
 
 
 

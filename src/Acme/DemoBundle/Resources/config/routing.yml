@@ -18,3 +18,7 @@ _about:
 _flat_view:
     path:     /flat/{id}/view
     defaults: { _controller: AcmeDemoBundle:Welcome:view }
+
+_js_list:
+    path:     /list
+    defaults: { _controller: AcmeDemoBundle:Welcome:list }

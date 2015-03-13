@@ -1,0 +1,31 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block javascript %}
+    {% javascripts "%kernel.root_dir%/../vendor/jms/twig-js/twig.js" %}
+    <script language="javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% javascripts "@AcmeDemoBundle/Resources/views/Welcome/roomjs.html.twig"
+        filter="twig_js, ?yui_js" %}
+        <script language="javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock javascript %}
+
+{% block dream %}
+
+{% endblock dream %}
+
+{% block content %}
+    <section class="listings">
+        <div class="wrapper">
+            <button class="btn btn-primary" id="load-flats" value="Load">Load</button>
+            <ul class="properties_list">
+            </ul>
+            <div class="more_listing">
+                <a href="#" class="more_listing_btn">View More Listings</a>
+            </div>
+        </div>
+    </section>	<!--  end listing section  -->
+
+{% endblock content %}
+
