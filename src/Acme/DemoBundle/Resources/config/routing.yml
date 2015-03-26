@@ -22,3 +22,7 @@ _flat_view:
 _js_list:
     path:     /list
     defaults: { _controller: AcmeDemoBundle:Welcome:list }
+
+_json_list:
+    path:     /list_as_json
+    defaults: { _controller: AcmeDemoBundle:Welcome:listAsJson }

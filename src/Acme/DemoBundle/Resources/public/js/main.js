@@ -36,12 +36,21 @@ $(document).ready(function(){
 	});
 
 	$('#load-flats').click(function (e) {
-		var roomobj = {'price': 111, 'caption': 'caption sfdlkjfslkfdjsldkf sldkfjs dlfk','description': 'sdlfkjsdlfk sdlfks dlfskd', 'size': 445, 'img': 'property_1.jpg'};
-
-		var content = Twig.render(roomjs.html, {room: roomobj})
-		$('.properties_list').html(content);
-
-
+		$.ajax({
+			url: '/list_as_json',
+			success: function(response) {
+				var responseArray = eval(response);
+				var resultHtml = '';
+				var content;
+				var i;
+				for(i =0; i < responseArray.length; i++) {
+					roomobj = responseArray[i];
+					content = Twig.render(roomjs.html, {room: roomobj})
+					resultHtml = resultHtml + content;
+				}
+				$('.properties_list').html(resultHtml);
+			}
+		});
 	});
 
 

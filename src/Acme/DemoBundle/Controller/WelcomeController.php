@@ -3,6 +3,7 @@
 namespace Acme\DemoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class WelcomeController extends Controller
 {
@@ -35,6 +36,12 @@ class WelcomeController extends Controller
     {
         return $this->render('AcmeDemoBundle:Welcome:list.html.twig', array());
     }
+
+    public function listAsJsonAction()
+    {
+        return new Response(json_encode($this->provide()));
+    }
+
 
     private function provide()
     {
